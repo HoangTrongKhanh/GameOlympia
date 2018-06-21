@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="background" fx:id="rootPane" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../../CSS/background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KhoiDongController">
+   <children>
+      <VBox layoutX="436.0" layoutY="169.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="600.0">
+               <children>
+                  <Label fx:id="lblSTTCauHoi" text="Câu hỏi số 0" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDiem" layoutX="10.0" layoutY="10.0" text="Điểm 0" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="lblCauHoi" prefHeight="144.0" prefWidth="1000.0" text="Câu hỏi" textFill="WHITE" wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label text="Thời gian còn lại" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTime" text="60" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="612.0" layoutY="46.0" text="giây" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ProgressBar fx:id="prsbKD" prefHeight="30.0" prefWidth="350.0" progress="0.0" stylesheets="@../../CSS/ProgressBar.css" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="300.0">
+               <children>
+                  <Button id="blue-btn" fx:id="btnDung" mnemonicParsing="false" prefWidth="120.0" stylesheets="@../../CSS/Button.css" text="Đúng" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button id="green-btn" fx:id="btnSai" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="120.0" stylesheets="@../../CSS/Button.css" text="Sai" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="435.0" layoutY="20.0" text="KHỞI ĐỘNG" textFill="WHITE" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Button id="red-btn" fx:id="btnBack" layoutX="80.0" layoutY="25.0" mnemonicParsing="false" stylesheets="@../../CSS/Button.css" text="Back" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <VBox fx:id="vBoxEndGame" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #F2FEFA;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <Label fx:id="lblEndGame" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button fx:id="btnOkVCNV" defaultButton="true" mnemonicParsing="false" text="OK">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancel" cancelButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Cancel">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
